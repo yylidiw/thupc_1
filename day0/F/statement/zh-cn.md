@@ -44,6 +44,10 @@
 
 {{ s('output format') }}
 
+如果能，输出一行 `Chaotic Evil` 。
+
+如果不能，输出一行 `Not a ture problem setter` 。
+
 {{ s('sample', 1) }}
 
 {{ self.sample_text() }}
