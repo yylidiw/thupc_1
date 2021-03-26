@@ -10,13 +10,23 @@
 
 每个出题人都有一个守序指数 $L$ 和善良指数 $G$。对于一个idea，从题面、样例或数据范围的角度，有 $6$ 种风格可以设定，对应着在境界中移动一步：
 
-{{ img('graph1.png', size = 0.3, align = 'middle', inline = False, caption='', label='fig:sample') }}
+{{ img('graph1.png', size = 0.6, align = 'middle', inline = False, caption='', label='fig:sample') }}
 
 注意只能选择一个方向，比如不能同时选择复杂的题面和宽松的数据范围。
 
-你现在一共有 $n$ 个idea，你知道你给每个idea设定某一个风格时你的 $L$ 指数和 $G$ 指数的变化。具体地，对于每个idea有 $12$ 个参数 $tl_{i,l},tl_{i,g},l_{i,l},l_{i,g},bl_{i,l},bl_{i,g},br_{i,l},br_{i,g},r_{i,l},r_{i,g},tr_{i,l},tr_{i,g}$：
+你现在一共有 $n$ 个idea，你知道你给每个idea设定某一个风格时你的 $L$ 指数和 $G$ 指数的变化。具体地，对于第 $i$ 个idea有 $12$ 个参数 $tl_{i,l},tl_{i,g},l_{i,l},l_{i,g},bl_{i,l},bl_{i,g},br_{i,l},br_{i,g},r_{i,l},r_{i,g},tr_{i,l},tr_{i,g}$：
 
-如果选择“”，那么
+如果选择“简洁的题面”，那么 $L$ 变成 $L+tl_{i,l}$，$G$ 变成 $G+tl_{i,g}$；
+
+如果选择“平凡无用的样例”，那么 $L$ 变成 $L+l_{i,l}$，$G$ 变成 $G+l_{i,g}$；
+
+如果选择“宽松的数据范围”，那么 $L$ 变成 $L+bl_{i,l}$，$G$ 变成 $G+bl_{i,g}$；
+
+如果选择“复杂的题面”，那么 $L$ 变成 $L+br_{i,l}$，$G$ 变成 $G+br_{i,g}$；
+
+如果选择“包含彩蛋的样例”，那么 $L$ 变成 $L+r_{i,l}$，$G$ 变成 $G+r_{i,g}$；
+
+如果选择“松松松的数据范围”，那么 $L$ 变成 $L+tr_{i,l}$，$G$ 变成 $G+tr_{i,g}$。
 
 这里所有的加法都在模 $p$ 意义下进行。
 
