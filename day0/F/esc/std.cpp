@@ -76,8 +76,8 @@ int main()
     }
     int l=io::F(),g=io::F();
     if(f[Z][Z][l]>>g&1)
-        puts("yes");
+        puts("Chaotic Evil");
     else
-        puts("no");
+        puts("Not a true problem setter");
 	return 0;
 }
