@@ -17,5 +17,7 @@ time limit: 1.0
 title:
   zh-cn: 小E爱消除
 type: program
-users: {}
+users: 
+  esc:
+    std: {expected: == 100, path: esc/std.cpp}
 version: 2
