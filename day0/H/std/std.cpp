@@ -29,7 +29,7 @@ int main (){
 	check(k+1+ceil(rem,m),xx);
 	}
 	for (i=1;i<=m;i++) nn=(nn*10+(n[i]-'0'))%(k+1);
-	if (n==0) check(k+1,xx);
+	if (nn==0) check(k+1,xx);
 	check(k+2,xx);
 	return 0; 
 }
