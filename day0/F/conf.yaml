@@ -16,7 +16,7 @@ partial score: false
 pre: []
 samples:
   - cases: [1]
-time limit: 10.0
+time limit: 1.0
 title:
   zh-cn: 混乱邪恶
 type: program
