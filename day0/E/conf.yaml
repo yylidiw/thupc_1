@@ -7,7 +7,7 @@ compile:
   pas: -O2
   py: ''
 data: 
- - cases: [1,2,3]
+ - cases: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
    score: 100
 folder: problem
 memory limit: 512 MiB

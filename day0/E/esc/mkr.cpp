@@ -34,7 +34,7 @@ int main()
     int ta=1;
     while(1)
     {
-        sprintf(s,"../data/%d.in",ta);
+        sprintf(s,"D:/OI/thupc_1/day0/E/data/%d.in",ta);
         FILE *p=fopen(s,"r");
         if(p)
         {

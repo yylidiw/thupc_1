@@ -35,7 +35,7 @@ int main()
     int ta=1;
     while(1)
     {
-        sprintf(s,"../data/%d.in",ta);
+        sprintf(s,"D:/OI/thupc_1/day0/E/data/%d.in",ta);
         FILE *p=fopen(s,"r");
         if(p)
         {
@@ -63,20 +63,29 @@ int main()
     for(int i=1;i<=n;++i)
     {
         int d=R(1,l+r);
-        if(tst)
+        int t=R(1,100);
+        if(tst+q.size()==n||tst&&t<=30||tst==k)
         {
-            int x=a[R(1,c)];
-            s[++tst]=x;
+            int x=st[tst--];
             if(d<=l)q.push_front(x);
                 else q.push_back(x);
         }
         else
         {
             int x=a[R(1,c)];
+            while(tst&&x==st[tst])
+                x=a[R(1,c)];
+            st[++tst]=x;
             if(d<=l)q.push_front(x);
                 else q.push_back(x);
         }
-        
     }
+    int fir=1;
+    for(auto i:q)
+        if(fir)
+            printf("%d",i),fir=0;
+        else
+            printf(" %d",i);
+    puts("");        
 	return 0;
 }
