@@ -30,13 +30,25 @@
 
 先将两端的 $3$ 放入杯子中消去。
 
+{{ img('3.png', size = 0.4, align = 'middle', inline = False, caption='', label='fig:sample') }}
+
 然后把左端的 $5,1,4,9$ 依次放入杯子，这时杯子中有 $4$ 个球。
 
-再把右端的 $9,4,1,5$ 依次放入杯子，每放入一个球就会和杯子里的另一个球消去。在放入 $9$ 后消去前杯子中有 $5,1,4,9,9$，所以杯子需要能够容纳 $5$ 个球。放入这 $4$ 个球后杯子是空的。
+{{ img('4.png', size = 0.4, align = 'middle', inline = False, caption='', label='fig:sample') }}
 
-最后把剩下的两个 $3$ 依次放入杯子。这时杯子是空的。
+再把右端的 $9,4$ 依次放入杯子，每放入一个球就会和杯子里的另一个球消去。在放入 $9$ 后消去前杯子中有 $5,1,4,9,9$，所以杯子需要能够容纳 $5$ 个球。
 
-（可能会考虑放插图）
+{{ img('5.png', size = 0.4, align = 'middle', inline = False, caption='', label='fig:sample') }}{{ img('6.png', size = 0.4, align = 'middle', inline = False, caption='', label='fig:sample') }}
+
+接着把左端的 $3,3$ 放入杯子，这时被杯子中有 $2$ 个球。
+
+{{ img('7.png', size = 0.4, align = 'middle', inline = False, caption='', label='fig:sample') }}{{ img('8.png', size = 0.4, align = 'middle', inline = False, caption='', label='fig:sample') }}
+
+最后把右端的 $1,5$ 依次放入杯子。这时杯子是空的。
+
+{{ img('9.png', size = 0.4, align = 'middle', inline = False, caption='', label='fig:sample') }}{{ img('10.png', size = 0.4, align = 'middle', inline = False, caption='', label='fig:sample') }}
+
+或见下发文件中的 `Sampledescription.pptx`。
 
 {{ s('subtasks') }}
 

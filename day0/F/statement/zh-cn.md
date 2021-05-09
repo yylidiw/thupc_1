@@ -6,7 +6,7 @@
 
 境界是一个无限大的三角形网格。网格如下图，每个交叉点都有6个相邻的交叉点。你从某一个交叉点出发，每次给一个出题idea设定风格都会使你在境界中移动一步。
 
-{{ img('graph2.png', size = 1, align = 'middle', inline = False, caption='', label='fig:sample') }}
+{{ img('graph2.png', size = 0.7, align = 'middle', inline = False, caption='', label='fig:sample') }}
 
 {{ s('description') }}
 
