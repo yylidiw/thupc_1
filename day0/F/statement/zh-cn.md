@@ -40,7 +40,7 @@
 
 第一行两个正整数 $n,p$。
 
-接下来 $n$ 行，每行 $12$ 个非负整数 $tl_{i,l},tl_{i,g},l_{i,l},l_{i,g},bl_{i,l},bl_{i,g},br_{i,l},br_{i,g},r_{i,l},r_{i,g},tr_{i,l},tr_{i,g}$。
+接下来 $n$ 行，每行 $12$ 个非负整数 $tl_{i,l},tl_{i,g},l_{i,l},l_{i,g},bl_{i,l},bl_{i,g},br_{i,l},br_{i,g},r_{i,l},r_{i,g},tr_{i,l},tr_{i,g}$。参数的顺序与题目描述中的一致，无需额外检查。
 
 最后一行两个非负整数 $L^*,G^*$。
 
@@ -48,7 +48,7 @@
 
 如果能，输出一行 `Chaotic Evil` 。
 
-如果不能，输出一行 `Not a ture problem setter` 。
+如果不能，输出一行 `Not a true problem setter` 。
 
 {{ s('sample', 1) }}
 
