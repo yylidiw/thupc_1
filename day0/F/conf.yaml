@@ -22,5 +22,8 @@ title:
 type: program
 users: 
   esc:
+    std: {expected: == 0, path: esc/std.cpp}
+    no_shuffle: {expected: == 0, path: esc/no_shuffle.cpp}
+    no_B: {expected: == 0, path: esc/no_B.cpp}
     B_10: {expected: == 0, path: esc/B_10.cpp}
 version: 2
