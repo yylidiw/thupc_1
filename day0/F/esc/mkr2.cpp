@@ -89,12 +89,14 @@ int main()
     po fixed=(po){0,0},target=(po){0,0};
     po pos=(po){0,0};
     po ex=Rpo(p),ey=Rpo(p);
+    //po ex=(po){0,0},ey=(po){0,0};
     po ed[6]={ey-ex,-ex,-ey,ex-ey,ex,ey};
     po key[2]={Rpo(p),Rpo(p)};
     //po key=(po){0,R(0,p-1)};
     for(int i=n;i;--i)
     {
-        po fi=Rpo(p);   
+        po fi=Rpo(p);
+        //po fi=(po){0,0};
         for(int j=0;j<6;++j)
             a[i].f[j]=ed[j]+fi;
         fixed=fixed+fi;
@@ -110,6 +112,7 @@ int main()
         a[i].f[dir]=a[i].f[dir]+key[se];
         target=target+key[se];
     }
+    std::random_shuffle(a+1,a+n+1);
     for(int i=1;i<=n;++i)
         for(int j=0;j<6;++j)
             printf("%d %d%c",a[i].f[j].x,a[i].f[j].y," \n"[j==5]);
