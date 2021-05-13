@@ -23,4 +23,10 @@ type: program
 users: 
   esc:
     std: {expected: == 100, path: esc/std.cpp}
+  czr:
+    naive: {expected: == 0, path: czr/naive.cpp}
+    cheat: {expected: == 0, path: czr/cheat.cpp}
+    meet_in_the_middle: {expected: == 0, path: czr/mim.cpp}
+    no_rand: {expected: == 0, path: czr/norand.cpp}
+    sol: {expected: == 100, path: czr/sol.cpp}
 version: 2
