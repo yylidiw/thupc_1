@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
-const int L=15;
+const int L=20;
 int n,p,a[105][3][3][3],d[105];
 ll t[2][2*L+3][101][101];
 inline int s(int a)
