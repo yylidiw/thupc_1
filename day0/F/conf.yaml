@@ -13,7 +13,6 @@ folder: problem
 memory limit: 512 MiB
 name: F
 partial score: false
-pre: []
 samples:
   - cases: [1]
 time limit: 1.0
@@ -22,8 +21,8 @@ title:
 type: program
 users: 
   esc:
-    std: {expected: == 100, path: esc/std.cpp}
     std2: {expected: == 100, path: esc/std2.cpp}
+    std: {expected: == 100, path: esc/std.cpp}
     no_shuffle: {expected: == 0, path: esc/no_shuffle.cpp}
     no_B: {expected: == 0, path: esc/no_B.cpp}
     B_10: {expected: == 0, path: esc/B_10.cpp}

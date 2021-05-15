@@ -24,7 +24,7 @@ namespace io
 		return F?-n:n;
 	}
 }
-const int T=41;
+const int T=44;
 unsigned long long m[2][100][100][T];
 struct idea
 {
@@ -33,10 +33,11 @@ struct idea
 }id[222];
 const int dx[6]={-1,-1,0,1,1,0};
 const int dy[6]={1,0,-1,-1,0,1};
-const int Z=20;
+const int Z=21;
 const int B=20;
 unsigned long long (*f)[100][T]=m[0];
 unsigned long long (*g)[100][T]=m[1];
+const unsigned long long H=0x7fffffffffffffffllu;
 int main()
 {
 	int n=io::F(),p=io::F();
@@ -48,25 +49,32 @@ int main()
     f[0][0][Z]=1llu<<Z;
     for(int i=1;i<=n;++i)
     {
-        memset(g,0,sizeof(m[0]));
         for(int l=0;l<p;++l)
             for(int gg=0;gg<p;++gg)
             {
-                for(int k=0;k<3;++k)
+                for(int k=0;k<1;++k)
                 {
-                    int tol=(l+id[i].l[k])%p;
-                    int tog=(gg+id[i].g[k])%p;
-                    unsigned long long *F=f[l][gg],*G=g[tol][tog];
+                    int frl=(l+p-id[i].l[k])%p;
+                    int frg=(gg+p-id[i].g[k])%p;
+                    unsigned long long *F=f[frl][frg],*G=g[l][gg];
                     for(int y=Z-B;y<=Z+B;++y)
-                        G[y+dy[k]]|=F[y]>>-dx[k];
+                        G[y]=F[y-dy[k]]<<-dx[k];
+                }
+                for(int k=1;k<3;++k)
+                {
+                    int frl=(l+p-id[i].l[k])%p;
+                    int frg=(gg+p-id[i].g[k])%p;
+                    unsigned long long *F=f[frl][frg],*G=g[l][gg];
+                    for(int y=Z-B;y<=Z+B;++y)
+                        G[y]|=F[y-dy[k]]<<-dx[k];
                 }
                 for(int k=3;k<6;++k)
                 {
-                    int tol=(l+id[i].l[k])%p;
-                    int tog=(gg+id[i].g[k])%p;
-                    unsigned long long *F=f[l][gg],*G=g[tol][tog];
+                    int frl=(l+p-id[i].l[k])%p;
+                    int frg=(gg+p-id[i].g[k])%p;
+                    unsigned long long *F=f[frl][frg],*G=g[l][gg];
                     for(int y=Z-B;y<=Z+B;++y)
-                        G[y+dy[k]]|=F[y]<<dx[k];
+                        G[y]|=F[y-dy[k]]>>dx[k];
                 }
             }
         std::swap(f,g);
@@ -79,5 +87,6 @@ int main()
    // for(int i=0;i<p;++i,puts(""))
     //    for(int j=0;j<p;++j)
       //      printf("%d ",(int)(f[Z][Z][i]>>j&1));
+    //while(1);
 	return 0;
 }
