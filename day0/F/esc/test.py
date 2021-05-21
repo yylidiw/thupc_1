@@ -8,7 +8,7 @@ for t in range(10000):
     sum=0
     for i in range(100):
         sum+=a[i]
-        if(abs(sum)>11):
+        if(abs(sum)>15):
             cnt+=1
             break
 print(cnt)
