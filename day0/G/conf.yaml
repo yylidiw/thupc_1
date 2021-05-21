@@ -1,21 +1,25 @@
-args:
-  n: 1000
 compile:
   c: -O2 -std=c11
   cpp: -O2 -std=c++14
   java: ''
   pas: -O2
   py: ''
-data: []
+data: 
+  - cases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    score: 100
 folder: problem
 memory limit: 512 MiB
-name: G
+name: gambler
 partial score: false
 pre: []
-samples: []
+samples: 
+  - cases: [1, 2, 3]
 time limit: 1.0
 title:
-  zh-cn: 用于试题标题的中文名称
+  zh-cn: 赌徒问题
 type: program
-users: {}
+users: 
+  AnalogueHeart:
+    std: {expected: == 100, path: AnalogueHeart/gambler.cpp}
+    force: {expected: == 0, path: AnalogueHeart/force.cpp}
 version: 2
