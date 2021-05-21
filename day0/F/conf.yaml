@@ -11,7 +11,7 @@ data:
    score: 100
 folder: problem
 memory limit: 512 MiB
-name: F
+name: Chaotic Evil
 partial score: false
 samples:
   - cases: [1]
