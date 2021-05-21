@@ -32,8 +32,8 @@ struct idea
 }id[222];
 const int dx[6]={-1,-1,0,1,1,0};
 const int dy[6]={1,0,-1,-1,0,1};
-const int Z=33;
-const int B=30;
+const int Z=22;
+const int B=20;
 __int128 (*f)[66][100]=m[0];
 __int128 (*g)[66][100]=m[1];
 __int128 P;
@@ -79,5 +79,8 @@ int main()
         puts("Chaotic Evil");
     else
         puts("Not a true problem setter");
+   // for(int i=0;i<p;++i,puts(""))
+    //    for(int j=0;j<p;++j)
+      //      printf("%d ",(int)(f[Z][Z][i]>>j&1));
 	return 0;
 }
