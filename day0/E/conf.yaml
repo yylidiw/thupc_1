@@ -18,7 +18,7 @@ samples:
   - cases: [1]
 time limit: 1.0
 title:
-  zh-cn: 小E爱消除
+  zh-cn: E. 小E爱消除
 type: program
 users: 
   esc:
