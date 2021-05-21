@@ -11,13 +11,13 @@ data:
    score: 100
 folder: problem
 memory limit: 512 MiB
-name: Chaotic Evil
+name: F
 partial score: false
 samples:
   - cases: [1]
 time limit: 1.0
 title:
-  zh-cn: F. 混乱邪恶
+  zh-cn: 混乱邪恶
 type: program
 users: 
   esc:
