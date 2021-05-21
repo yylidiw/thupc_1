@@ -11,14 +11,14 @@ data:
    score: 100
 folder: problem
 memory limit: 512 MiB
-name: E
+name: Xiao E Loves Elimination
 partial score: false
 pre: []
 samples:
   - cases: [1]
 time limit: 1.0
 title:
-  zh-cn: 小E爱消除
+  zh-cn: E. 小E爱消除
 type: program
 users: 
   esc:
