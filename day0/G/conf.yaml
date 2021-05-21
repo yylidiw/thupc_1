@@ -22,4 +22,6 @@ users:
   AnalogueHeart:
     std: {expected: == 100, path: AnalogueHeart/gambler.cpp}
     force: {expected: == 0, path: AnalogueHeart/force.cpp}
+  zyb:
+    not_so_good: {expected: == 100, path: zyb/g.cpp}
 version: 2
