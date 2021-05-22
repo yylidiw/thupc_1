@@ -24,4 +24,7 @@ users:
     force: {expected: == 0, path: AnalogueHeart/force.cpp}
   zyb:
     not_so_good: {expected: == 100, path: zyb/g.cpp}
+  esc:
+    std: {expected: == 100, path: esc/std.cpp}
+    force: {expected: == 0, path: esc/bf.cpp}
 version: 2

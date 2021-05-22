@@ -10,11 +10,9 @@
 
 {{ s('description') }}
 
-每个出题人都有一个守序指数 $L$ 和善良指数 $G$。对于一个idea，从题面、样例或数据范围的角度，可以从 $6$ 个方向中选择恰好一个作为这个idea
+每个出题人都有一个守序指数 $L$ 和善良指数 $G$。对于一个idea，从题面、样例或数据范围的角度，可以从 $6$ 个方向中选择恰好一个作为这个idea对应的题目的特有风格，同时会在境界中沿着所选的箭头方向移动一步：
 
-对应的题目的特有风格，同时会在境界中沿着所选的箭头方向移动一步：
-
-{{ img('graph1.png', size = 0.6, align = 'middle', inline = False, caption='', label='fig:sample') }}
+{{ img('graph1.png', size = 0.4, align = 'middle', inline = False, caption='', label='fig:sample') }}
 
 你现在一共有 $n$ 个idea，你知道你给每个idea设定某一个风格时你的 $L$ 指数和 $G$ 指数的变化。具体地，对于第 $i$ 个idea有 $12$ 个参数 $tl_{i,l},tl_{i,g},l_{i,l},l_{i,g},bl_{i,l},bl_{i,g},br_{i,l},br_{i,g},r_{i,l},r_{i,g},tr_{i,l},tr_{i,g}$：
 
