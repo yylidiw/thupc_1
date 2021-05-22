@@ -25,7 +25,7 @@ namespace io
 	}
 }
 const int M=1000000007;
-int f[2222][11][2222];
+int f[11][2222];
 int p[777],pp;
 class Init
 {
@@ -42,45 +42,27 @@ class Init
         }
     }
 }INIT;
-std::bitset<2222> d[2222];
+int d[2222],pd;
 int main()
 {
 	int n=io::F(),m=io::F();
     long long k=io::F();
-    f[1][0][0]=1;
-    for(int i=1;i<=k&&i<=m;++i)
-        if(k%i==0)
-        {
-            for(int x=0;x<n;++x)
-                for(int j=0;j+i<=m;++j)
-                    f[1][x+1][j+i]=(f[1][x+1][j+i]+f[1][x][j])%M;
-        }
-    for(int i=1;i<=m;++i)
-        for(int j=1;j<=m;++j)
-            if(i*k%j==0)d[i].set(j);
-    for(int i=2;i<=m;++i)
-    {
-        long long min=m,mp;
-        for(int j=1;j<=pp&&p[j]<=i;++j)
-            if(i%p[j]==0)
-            {
-                int tmp=(d[i]^d[i/p[j]]).count();
-                if(cmin(min,tmp))mp=p[j];
-            }
-        memcpy(f[i],f[i/mp],sizeof(f[i]));
-        int (*F)[2222]=f[i];
-        for(int v=1;v<=m;v++)
-            if(d[i][v]&&!d[i/mp][v])
-                for(int x=0;x<n;++x)
-                    for(int j=0;j+v<=m;++j)
-                        F[x+1][j+v]=(F[x+1][j+v]+F[x][j])%M;
-    }
     int ans=0;
-    for(int i=1;i<=m;++i)
+    for(int z=1;z<=m;++z)
     {
-        //printf("%d\n",f[i][n][i]);
-        ans=(ans+f[i][n][i])%M;
+        memset(f,0,sizeof(f));
+        f[0][0]=1;
+        for(int i=1;i<=z;++i)
+            if(z*k%i==0)
+            {
+                for(int x=0;x<n;++x)
+                    for(int j=0;j+i<=z;++j)
+                        f[x+1][j+i]=(f[x+1][j+i]+f[x][j])%M;
+            }
+        ans=(ans+f[n][z])%M;
+        //printf("%d\n",f[n][z]);
     }
+    
     printf("%d\n",ans);
 	return 0;
 }
